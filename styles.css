@@ -13,7 +13,7 @@ body {
 
 /* Header styles */
 header {
-    background-color: #242424;
+    background-color: #FFB74D;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -94,7 +94,7 @@ main {
 
 .product p {
     margin-top: 10px;
-    color: #777;
+    color: #777777;
 }
 
 .price {
