@@ -64,12 +64,11 @@ main {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 10px;
-    width: calc(33.33% - 20px); /* Each product takes 33.33% of the available width */
+    width: calc(33.33% - 20px);
     text-align: center;
     border-radius: 5px;
     transition: transform 0.2s ease-in-out;
-    display: inline-block; /* Display products inline */
-    vertical-align: top; /* Align products to the top of the row */
+    animation: fadeIn 1s ease-in-out;
 }
 
 .product:hover {
@@ -173,3 +172,90 @@ footer p {
         transform: translateY(0);
     }
 }
+
+
+div.b {
+  position: static;
+  right: auto;
+} 
+
+div.c {
+  position: static;
+  left: 1000px;
+} 
+
+.button-1 {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #F082AC;
+}
+
+.abc {margin: 0; font: 13px tahoma, verdana, sans-serif; padding: 0;}
+        h1 {font-size: 30px; font-weight: bold; padding: 10px;}
+    
+        fieldset {
+            border-radius: 6px;
+            padding: 10px;
+            margin: 6px;
+            float: left;
+            width: 250px;
+            height: 300px;
+        }
+        
+    
+        input, select {background-position: 3px 5px; background-repeat: no-repeat; border-radius:
+        5px; padding: 5px 5px 5px 25px; width: 250px; margin: 5px; height: 20px;}
+
+        select {height: 32px; width: 280px;}
+
+        input:focus, select:focus {outline: none;}
+        
+        input:focus:invalid, select:focus:invalid {background-image: url(invalid.png); box-shadow: 0px 0px 5px
+        #b01212; border: 2px solid #b01212;}
+        input[required]:valid, select:valid {background-image: url(accept.png); border: 2px solid #7ab526;}
+        input[type=submit] {background: #7ab526; border: none; box-shadow: 0px 0px 5px
+        #7ab526; color: #fff; cursor: pointer; float: center; font-weight: bold;
+        padding-left: 5px; width: 100px; height: 50px; font-size: large;}
+
+        p {margin: auto;}
+
+        input[type=color] {width: 300px; height: 50px; padding-left: 1%; padding-right: 1%;}
+		
+		.footer{
+		position:relative;
+		top:-100px;
+		heigth:50px;
+		}
+		
+		
+		p span{display:block;}
+		
+#first {  
+  font-size: 20px;  
+}  
