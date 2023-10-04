@@ -6,15 +6,15 @@ body, h1, h2, p, ul, li {
 
 /* Basic styling for the body */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Marker Felt', 'fantasy';
+    background-color: #F7EDF0 ;
     line-height: 1.6;
 }
 
 /* Header styles */
 header {
-    background-color: #FFB74D;
-    color: #fff;
+    background-color: #F4AFAB ;
+    color: #F7EDF0;
     padding: 20px 0;
     text-align: center;
 }
@@ -45,7 +45,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #007bff;
+    color: #F4CBC6 ;
 }
 
 /* Main content styles */
@@ -139,7 +139,7 @@ button:hover {
 
 /* Footer styles */
 footer {
-    background-color: #242424;
+    background-color: #F4AFAB ;
     color: #fff;
     text-align: center;
     padding: 10px 0;
