@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - My Fancy Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+  <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get all quantity input elements
+            const quantityInputs = document.querySelectorAll('.quantity-input');
+
+            // Get all item price elements
+            const itemPrices = document.querySelectorAll('.item-price');
+
+            // Get the total price element
+            const totalPriceElement = document.getElementById('totalPrice');
+
+            // Function to update the item price for a given input and item price element
+            function updateItemPrice(input, itemPriceElement) {
+                const quantity = parseInt(input.value) || 0;
+                const pricePerItem = parseFloat(itemPriceElement.getAttribute('data-price')) || 0;
+                const totalPriceForItem = quantity * pricePerItem;
+                itemPriceElement.textContent = '$' + totalPriceForItem.toFixed(2);
+            }
+
+            // Function to update the total price based on item quantities
+            function updateTotalPrice() {
+                let total = 0;
+
+                // Calculate the total price by summing up the item prices
+                itemPrices.forEach((price) => {
+                    total += parseFloat(price.textContent.replace('$', '')) || 0;
+                });
+
+                // Update the total price element with the calculated total
+                totalPriceElement.textContent = '$' + total.toFixed(2);
+            }
+
+            // Add event listeners to quantity inputs for input events
+            quantityInputs.forEach((input, index) => {
+                input.addEventListener('input', () => {
+                    updateItemPrice(input, itemPrices[index]);
+                    updateTotalPrice();
+                });
+            });
+
+            // Initialize item prices and total price
+            itemPrices.forEach((itemPrice, index) => {
+                updateItemPrice(quantityInputs[index], itemPrice);
+            });
+            updateTotalPrice();
+        });
+		
+		 function redirectToCheckout() {
+		
+			var checkoutUrl = "approval.html";
+
+			
+			window.location.href = checkoutUrl;
+		}
+		
+		
+		function process() {
+			alert("Execute process()...");
+
+			var pWin = window.open("approval.html", "cWin", width="180", height="150");
+
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+    </script>
+</head>
+<body>
+
+    <header>
+        <center>	
+			<h1>	
+				<table>
+					<tr>
+						<td>Welcome to </td>
+						<td rowspan="2"><a href="index.html"><img src="logo.png"  width="150" height="120"  ></a></td>
+						<td>Online Store</td>
+					</tr>
+				</table>
+			</h1>
+		</center>	
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+	<main>
+		<h2>Your Shopping Cart:</h2></br>
+		<div class="cart-items">
+		
+	
+			<div class="cart-item">
+				<img src="Angus Beef.jpg" alt="Angus Beef" width="150" height="120">
+				<div class="item-details">
+					<h3>Angus Beef</h3>
+					<p>Price: $150.00</p>
+					<label for="quantity1">Quantity:</label>
+					<input type="number" id="quantity1" class="quantity-input" value="0" min=0 max=10>
+					<span class="item-price" id="itemPrice1" data-price="150.00">$0</span>
+				
+				</div>
+			</div>
+			
+			<div class="cart-item">
+				<img src="Red King Crab.jpg" alt="Red King Crab" width="150" height="120">
+				<div class="item-details">
+					<h3>Red King Crab</h3>
+					<p>Price: $350.00</p>
+					<label for="quantity2">Quantity:</label>
+					<input type="number" id="quantity2" class="quantity-input" value="0" min=0 max=10>
+					<span class="item-price" id="itemPrice2" data-price="350.00">$0</span>
+				
+				</div>
+			</div>
+
+			<div class="cart-item">
+				<img src="Norway Premium Smoked Salmon.jpg" alt="Norway Premium Smoked Salmon" width="150" height="120">
+				<div class="item-details">
+					<h3>Norway Premium Smoked Salmon</h3>
+					<p>Price: $65.00</p>
+					<label for="quantity3">Quantity:</label>
+					<input type="number" id="quantity3" class="quantity-input" value="0" min=0 max=10>
+					<span class="item-price" id="itemPrice3" data-price="65.00">$0</span>
+			
+				</div>
+			</div>
+		</div>
+		<div class="cart-total">
+			<h3>Total: <span id="totalPrice">$100.00</span></h3>
+
+			<button class="checkout-button" onclick="process()">Proceed to Checkout</button>
+
+		</div>
+	</main>
+
+
+
+
+
+    <footer>
+        <p>&copy; 2023 My Fancy Online Store</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="jslib/jquery-1.11.1.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop - My Fancy Online Store</title>
+<link rel="stylesheet" href="styles.css">
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+<script>
+$(document).ready(function(){	
+				$("#div3").hide();
+				$("#div2").hide();
+				$("#div4").hide();
+				$("#condition").keyup(function(){
+					$("table tbody tr").hide().filter(":contains(" + $(this).val() + ")").show();
+				});
+					
+				$("#btn1").click(function(){
+					$("#div3").hide(2000);
+					$("#div4").hide(2000);
+					$("#div2").show(2000);
+					});
+				$("#btn1").dblclick(function(){
+					$("#div2").hide(2000);
+					});
+				$("#btn2").click(function(){
+					$("#div4").hide(2000);
+					$("#div2").hide(2000);
+					$("#div3").show(2000);
+					});
+				$("#btn2").dblclick(function(){
+					$("#div3").hide(2000);
+					});
+				$("#btn3").click(function(){
+					$("#div3").hide(2000);
+					$("#div2").hide(2000);
+					$("#div4").show(2000);
+					});
+				$("#btn3").dblclick(function(){
+					$("#div4").hide(2000);
+					});		
+	
+					
+		});
+		
+		
+		
+</script>
+
+
+</head>
+
+
+<body>
+
+    <header>
+         <center>	
+			<h1>	
+				<table>
+					<tr>
+						<td>Welcome to </td>
+						<td rowspan="2"><a href="index.html"><img src="logo.png"  width="150" height="120"  ></a></td>
+						<td>Online Store</td>
+					</tr>
+				</table>
+			</h1>
+		</center>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+	<center>
+
+
+		<div class="b">
+
+			</br>
+
+			<button class="button-1"  id="btn1" >Angus Beef</button>
+			<button class="button-1"  id="btn2">Red King Crab</button>
+			<button class="button-1"  id="btn3">Norway Premium Smoked Salmon </button>
+		</div>
+	</center>
+
+	<div id="div2" style="width:auto;height:auto;border:display:none;font-size:xx-large">
+		<center>
+			</br>
+			<table>
+				<tr>
+					<th rowspan="3"><img src="Angus Beef.jpg" width="300" height="350"> </th>
+					<td>Angus Beef</td>
+				</tr>
+				<tr>
+					<td>
+						<p id="first">
+								The farmers and ranchers behind the Certified Angus Beef ® brand are dedicated to delivering the very  </br>
+								best Angus beef,including premium and natural product options, to meet each customer’s expectations.</br>
+								No matter which you choose, you’ll enjoy premium Angus beef that meets 10 standards. Our logo is your </br>
+								sign that it’s truly a cut above.</br>
+						</p>
+					</td>
+				</tr>
+			</table>
+	
+		</center>
+	</div>
+
+	<div id="div3" style="width:auto;height:auto;border:display:none;font-size:xx-large">
+		<center>
+			</br>
+			<table>
+				<tr>
+					<th rowspan="3"><img src="Red King Crab.jpg" width="300" height="350"> </th>
+					<td>Red King Crab</td>
+				</tr>
+				<tr>
+					<td>
+						<p id="first">
+							Red king crabs (Paralithodes camtschaticus) are a species of large crab that appear dark red or burgundy in color. </br>
+							Red king crabs can grow very large with carapace (the shell covering their back) lengths up to 11 inches and a five foot leg span.</br> 
+							Red king crabs have "tails," or abdomens, that are distinctive, being fan-shaped and tucked underneath the rear of the shell. </br>
+							They also have five pairs of legs; the first bears their claws or pincers, the right claw is usually the largest on the adults, </br>
+							the next three pairs are their walking legs, and the fifth pair of legs are small and normally tucked underneath </br>
+							the rear portion of their carapace.
+						</p>
+					</td>
+				</tr>
+
+			</table>
+
+		
+
+		</center>
+	</div>
+
+	<div id="div4" style="width:auto;height:auto;border:display:none;font-size:xx-large">
+		<center>
+		</br>
+			<table>
+				<tr>
+					<th rowspan="3"><img src="Norway Premium Smoked Salmon.jpg" width="300" height="350"> </th>
+					<td>Norway Premium Smoked Salmon</td>
+				</tr>
+				<tr>
+					<td>
+						<p id="first">
+							This Atlantic salmon (Salmo Salar) is farmed in rich and unpolluted cold waters among the best-growing </br> 
+							conditions in the world where it has time to develop and slowly grow into the right size.Great care is </br> 
+							applied during the development and feeding of the salmon in order not to stress the fish.Once this noble </br> 
+							fish has reached optimal maturity we hand-select the ones of perfect size and the right amount of fat for </br> 
+							processing. They are then carefully cured with a mineral-rich salt, gently dried,and smoked with a selection </br> 
+							of fragrant wood chips in accordance with ancient customs.The fillets are hand trimmed leaving only the most</br> 
+							pure, juiciest, and succulent part for you to enjoy!</br> 
+						</p>
+					</td>
+				</tr>
+
+			</table>
+
+
+
+
+
+
+
+		</center>
+	</div>
+
+
+
+
+
+</div>
+
+</body>
+    <footer>
+        <p>&copy; 2023 My Fancy Online Store</p>
+    </footer>
+</html>
