@@ -40,7 +40,7 @@ app.get('/add_cart', function(req, res) {
 
 		var responseText = 'Prod_id: ' + req.query.prod_id + '<br>';
 		responseText += 'Qty: ' + req.query.qty + '<br>';
-		responseText += 'Price: ' + req.query.price + '<br>';
+		responseText += 'Price: ' + req.query.itemPrice + '<br>';
 		responseText += 'Username: ' + req.query.f_username + '<br><br>';
 //		res.send(responseText);
 
@@ -115,12 +115,27 @@ app.get('/check_out', function(req, res) {
 			responseText += 'Thank you for your order! ' + req.query.f_check_out_username + '<br>';
 			responseText += 'Your order details: <br><br>';
 			responseText += '<table border="2">';
-			responseText += '<tr><th>Original Order Date</th><th>Product ID</th><th>Product Description</th><th>Quantity</th><th>Price</th><th>Amount</th></tr>';
+			responseText += '<tr><th>Image</th><th>Original Order Date</th><th>Product ID</th><th>Product Description</th><th>Quantity</th><th>Price</th><th>Amount</th></tr>';
 			var total_due = 0;
 			var sub_total = 0;
+			
 			for (var i = 0; i < result.length; i++) {
+				if(result[i].prod_id === 1){
+					imagePath = "Angus Beef.jpg";
+				}
+				
+				else if (result[i].prod_id === 2){
+					imagePath = "Norway Premium Smoked Salmon.jpg";
+					
+				}
+				
+				else {
+					imagePath = "Red King Crab.jpg";
+					
+				}
+				
 				sub_total = result[i].cart_qty * result[i].cart_price;
-				responseText += '<tr><td>' + result[i].order_date + '</td><td>' + result[i].prod_id + '</td><td>' + result[i].prod_desc + '</td><td>' + result[i].cart_qty + '</td><td>' + result[i].cart_price + '</td><td>' + sub_total + '</td></tr>';
+				responseText += '<tr><td><img src="' + imagePath + '" alt="Product Image" width="150" height="120"></td><td>' + result[i].order_date + '</td><td>' + result[i].prod_id + '</td><td>' + result[i].prod_desc + '</td><td>' + result[i].cart_qty + '</td><td>' + result[i].cart_price + '</td><td>' + sub_total + '</td></tr>';
 
 				total_due += sub_total;
 			}
