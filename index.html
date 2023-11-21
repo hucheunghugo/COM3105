@@ -5,20 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Chain</title>
     <link rel="stylesheet" href="styles.css">
-</head>
+	<script src="jslib/jquery-1.11.1.js"></script>
+	<script> 
+		$(document).ready(function(){
+		$("#1").animate({left: $("#1").parent().width() / 2 - $("#1").width() / 2
+		}, 2000);
+		});
+	</script> 
+	<style>
 
+	</style>
+
+</head>
 
 <body>
     <header>
 		<h1>	
-			<a href="index.html"><img src="logo.png" width=auto height=auto></a>
+			<a href="http://localhost:3000"><img src="logo.png" width=auto height=auto></a>
 		</h1>
 	<nav>
 		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="shop.html">Products</a></li>
-			<li><a href="cart.html">Cart</a></li>
-			<li><a href="aboutus.html">About us</a></li>
+			<li><a href="http://localhost:3000">Home</a></li>
+			<li><a href="http://localhost:3000/view_shop">Products</a></li>
+			<li><a href="http://localhost:3000/view_catalog">Cart</a></li>
+			<li><a href="http://localhost:3000/view_contact">About us</a></li>
 		</ul>
 	</nav>
 	</header>
@@ -27,9 +37,8 @@
         <section class="home">
             <h2>Welcome to our food chain online store </h2>
             <p>Visit our shop to explore our imported fresh food </p>
-            <a href="shop.html" class="button-1">Shop Now</a>
+            <a href="http://localhost:3000/view_catalog" class="button-1">Shop Now</a>
         </section>
-
     </main>
 
     <footer>
